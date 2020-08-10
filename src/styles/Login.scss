@@ -1,0 +1,122 @@
+.login {
+  padding-top: 8rem;
+  text-align: center;
+}
+
+// TODO: Corregir TODO el css
+// TODO: Mejorar código de css
+// FIXME: Responsive design
+input {
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: auto;
+  height: 2.5rem;
+  width: 56.25rem;
+  display: block;
+  margin-bottom: 1.2rem;
+  background-color: transparent;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  color: #fff;
+}
+
+#f1 {
+  animation: expandingInput1 0.5s;
+  -webkit-animation: expandingInput1 0.5s;
+  transition: ease;
+}
+
+@keyframes expandingInput1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#f2 {
+  animation: expandingInput2 1s;
+  -webkit-animation: expandingInput2 1s;
+  transition: ease;
+}
+
+@keyframes expandingInput2 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// FIXME: Hacer responsive el boton
+button {
+  width: 59rem;
+  height: 3.9rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-image: linear-gradient(to left, #743ad5, #d53a9d);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  animation: expandingButton 0.5s;
+  -webkit-animation: expandingButton 0.5s;
+  transition: ease;
+}
+
+.msjerror {
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: auto;
+  height: 2.5rem;
+  width: 56.25rem;
+  display: block;
+  margin-bottom: 1.2rem;
+  background-color: transparent;
+  border: 10px solid;
+  border-image-slice: 1;
+  border: 5px solid;
+  border-color: #ff0844;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  color: #fff;
+  animation: expandingButton 0.5s;
+  -webkit-animation: expandingButton 0.5s;
+  transition: ease;
+}
+
+@keyframes expandingButton {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .login {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 1000px) {
+  input,
+  button,
+  .msjerror {
+    width: 80%;
+    font-size: 1em;
+  }
+}

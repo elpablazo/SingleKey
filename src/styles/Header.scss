@@ -1,0 +1,146 @@
+.logo {
+  transition: ease;
+  animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  cursor: pointer;
+  display: inline-block;
+
+  /* Safari, Chrome and Opera > 12.1
+  -moz-animation: fadein 2s;
+  /* Firefox < 16  
+  -ms-animation: fadein 2s;
+  /* Internet Explorer
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 
+  animation: fadein 2s;
+  */
+}
+
+
+.gradient-box {
+  display: flex;
+  align-items: center;
+  //width: 50vw;
+  width: 90%;
+  margin: auto;
+
+  background-color: #0d0d0d;
+
+  border-radius: 50%;
+
+  position: relative;
+  // padding: 30% 2em;
+  // box-sizing: border-box;
+  width: 15rem;
+  height: 15rem;
+
+  $border: 5px;
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid $border transparent;
+  /* !importanté */
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: linear-gradient(to right, red, orange);
+  }
+}
+
+.logoletter {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+  text-align: center;
+  font-size: 7rem;
+  background: -webkit-linear-gradient(red, orange);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 50px #8C8C8C;
+  transition: ease;
+  animation: fadeL 3s;
+  -webkit-animation: fadeL 3s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeL {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// TODO: Agregar compatibilidad de efectos con otros navegadores
+/* Firefox < 16 
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer 
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+} */

@@ -1,0 +1,43 @@
+.description {
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 10rem;
+  color: #fff;
+}
+
+.underbar {
+  max-width: 800px;
+  height: 0.5rem;
+  border-radius: 1px;
+  background-image: -webkit-linear-gradient(red, orange);
+  margin: auto;
+  animation: expandingBar 3s;
+  -webkit-animation: expandingBar 3s;
+  transition: ease;
+}
+
+@keyframes expandingBar {
+  0% {
+    width: 0%;
+  }
+
+  65% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+// FIXME: Que todo el diseño quepa en mi pantalla de iPhone
+@media (min-width: 300px) and (max-width: 580px) {
+  .description {
+    margin-top: 0rem;
+    padding-top: 0;
+  }
+}
